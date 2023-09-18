@@ -1,6 +1,7 @@
 import Welcome from './Welcome';
 import Box from './Box';
 import Box1 from './Box1';
+import Box2 from './Box2';
 
 function Abc() {
   return (
@@ -22,6 +23,8 @@ function Abc() {
         어떤게 나타나냐?
         <p>잘 보일까요</p>
       </Box1>
+      <hr />
+      <Box2></Box2>
     </>
   );
 }
