@@ -20,7 +20,9 @@ import React, { useState } from "react";
 } */
 
 const Counter = (props) => {
+  
   // useState 사용
+  const [count, setCount] = useState(props.num);
   const [num, setNum] = useState(props.count);
   // num: 상태관리용 변수
   // setNum: num의 Setter함수

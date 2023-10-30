@@ -1,4 +1,4 @@
-function Box1(props) {
+export default function Box1(props) {
   console.log(props.children);
   return (
     <>
@@ -14,4 +14,4 @@ Box1.defaultProps = {
   color: 'white',
 };
 
-export default Box1;
+
