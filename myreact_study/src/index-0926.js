@@ -11,8 +11,7 @@
 // //     {/* <App /> */}
 // //     {/*<h1>일본반 화이팅</h1>*/}
 // //     <App></App>
-  
-  
+
 // //   </>
 // // );
 
@@ -20,19 +19,18 @@
 // import ReactDOM from 'react-dom/client';
 // import PropTypes from 'prop-types';
 
-
 // const SomeComponent = (props) => {
 //   // return (<>{props.data[2]}</>);
 //   return (
 //     <div>
-//       {/* <input 
-//       type='text' 
+//       {/* <input
+//       type='text'
 //       // value={props.searchText}(X) HTML문법  JSX문법을 사용하지 않으면 에러 발생
 //       defaultValue={props.searchText}/> */}
 
-//       <input 
+//       <input
 //         type='text'
-//         defaultValue={props.data[2]} 
+//         defaultValue={props.data[2]}
 //         style={{
 //           marginTop:'50px',
 //           marginBottom:'10px',

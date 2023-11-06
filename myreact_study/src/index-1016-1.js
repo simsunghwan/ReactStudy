@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "./App.css";
 
 // // [1] with JSX
@@ -38,54 +38,43 @@ import "./App.css";
 
 // [1] Function style - non JSX
 
-const Greeting = (props)=>{
-  const ch = ['안녕', '영진', '컴정', props.name,'님']
-  return (
-    React.createElement('div',{id:'hello'}, [...ch])
-  );
+const Greeting = (props) => {
+  const ch = ["안녕", "영진", "컴정", props.name, "님"];
+  return React.createElement("div", { id: "hello" }, [...ch]);
 };
 
 // class type
-class Greeting2 extends React.Component{
-  render(){
-    const ch = ['안녕', '영진', '컴정', this.props.name,'님']
-  return (
-    React.createElement('div',{id:'hello'}, [...ch])
-  );
+class Greeting2 extends React.Component {
+  render() {
+    const ch = ["안녕", "영진", "컴정", this.props.name, "님"];
+    return React.createElement("div", { id: "hello" }, [...ch]);
   }
 }
 
 // [3] function type with JSX
 const Greeting3 = (props) => {
-  return(
+  return (
     <>
-      <div id='hello3'>
-        {`안녕 영진 컴정 ${props.name}님`}
-      </div>
+      <div id="hello3">{`안녕 영진 컴정 ${props.name}님`}</div>
     </>
-  )
-}
+  );
+};
 
 // class type with JSX
 
 class Greeting4 extends React.Component {
-  render(){  // 반드시 구현해야하는 추상메서드에 가까움
-    const ch = ['안녕', '영진', '컴정', this.props.name,'님']
-    return (
-      React.createElement('div',{id:'hello'}, [...ch])
-    );
+  render() {
+    // 반드시 구현해야하는 추상메서드에 가까움
+    const ch = ["안녕", "영진", "컴정", this.props.name, "님"];
+    return React.createElement("div", { id: "hello" }, [...ch]);
   }
 }
 
-
-
-
-ReactDOM.createRoot(document.querySelector('#root')).render(
+ReactDOM.createRoot(document.querySelector("#root")).render(
   <>
-    <Greeting name='김영진' />
-    <Greeting2 name='이영진' />
-    <Greeting3 name='삼영진' />
-    <Greeting4 name='사영진' />
+    <Greeting name="김영진" />
+    <Greeting2 name="이영진" />
+    <Greeting3 name="삼영진" />
+    <Greeting4 name="사영진" />
   </>
 );
-

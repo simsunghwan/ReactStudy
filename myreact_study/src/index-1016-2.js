@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import "./App.css";
 
 // // [1] with JSX
@@ -102,7 +102,7 @@ e1(
 // const App = () => {
 //   let result = null;
 //   const loginCheck='Y';
-  
+
 //   if (loginCheck === 'Y'){
 //     result = <h3>홍박사님 환영합니다.</h3>
 //   } else {
@@ -116,26 +116,28 @@ e1(
 //   );
 // };
 
-ReactDOM.createRoot(document.querySelector('#root')).render(
+ReactDOM.createRoot(document.querySelector("#root")).render(
   <>
     {/* <App/> */}
     <App2 />
   </>
-
 );
-
 
 // [2] 삼항연산자 or &&(AND)
 
 const App2 = () => {
-  const loginCheck='Y';
-  
-  return(
+  const loginCheck = "Y";
+
+  return (
     <>
       {/* 삼항연산자 */}
-      {loginCheck==='Y'? (<h3>홍박사님 환영합니다.</h3>) : (<h3>게스트님 환영합니다.</h3>)}
+      {loginCheck === "Y" ? (
+        <h3>홍박사님 환영합니다.</h3>
+      ) : (
+        <h3>게스트님 환영합니다.</h3>
+      )}
       {/* && 연산자   */}
-      {loginCheck==='Y' && (<h3>홍박사님 환영합니다.</h3>)}
+      {loginCheck === "Y" && <h3>홍박사님 환영합니다.</h3>}
     </>
   );
 };
@@ -145,17 +147,22 @@ const App2 = () => {
 // 이름없는 함수를 정의하고 곧 바로 호출
 
 const App3 = () => {
-  const loginCheck='Y';
-  return(
+  const loginCheck = "Y";
+  return (
     <>
-      {  // JSX내에서 JS코드 실행
+      {
+        // JSX내에서 JS코드 실행
 
-        (()=>{ // 이름없는 함수 정의
+        (() => {
+          // 이름없는 함수 정의
           // if문, 삼항연산자, &&
-          return loginCheck==='Y'? (<h3>홍박사님 환영합니다.</h3>) : (<h3>게스트님 환영합니다.</h3>);
-
-        }) ()
+          return loginCheck === "Y" ? (
+            <h3>홍박사님 환영합니다.</h3>
+          ) : (
+            <h3>게스트님 환영합니다.</h3>
+          );
+        })()
       }
     </>
-  )
-}
+  );
+};

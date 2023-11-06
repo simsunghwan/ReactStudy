@@ -1,6 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 /* 
 // // 옛날방식 
@@ -54,7 +53,6 @@ ReactDOM.createRoot(document.querySelector('#root')).render(
   element
 ); */
 
-
 // const person = {
 //   name:'홍박사',
 //   address:'대구시',
@@ -67,8 +65,6 @@ ReactDOM.createRoot(document.querySelector('#root')).render(
 //   </h1>
 // );
 
-
-
 // function printPerson(person){
 //   const {name, address, age} = person;
 //   return (`${name} 입니다.${address}에서 살고, 나이는 ${age}살 입니다.`)
@@ -80,30 +76,31 @@ ReactDOM.createRoot(document.querySelector('#root')).render(
 // const element2 = <img src={photoUrl} />
 
 const MyObj = {
-  ColorPicker: function ColorPicker(props){
+  ColorPicker: function ColorPicker(props) {
     return (
-    <div style={{backgroundColor:props.color}}>
-      선택한 색상은: <b>{props.color}</b>
-    </div>);
-  }
+      <div style={{ backgroundColor: props.color }}>
+        선택한 색상은: <b>{props.color}</b>
+      </div>
+    );
+  },
+};
+
+function BlueColorPicker() {
+  return <MyObj.ColorPicker color="skyBlue"></MyObj.ColorPicker>;
 }
 
-function BlueColorPicker(){
-  return <MyObj.ColorPicker color='skyBlue'></MyObj.ColorPicker>
+function RedColorPicker() {
+  return <MyObj.ColorPicker color="red"></MyObj.ColorPicker>;
 }
 
-function RedColorPicker(){
-  return <MyObj.ColorPicker color='red'></MyObj.ColorPicker>
-}
-
-ReactDOM.createRoot(document.querySelector('#root')).render(
-/*   <>
+ReactDOM.createRoot(document.querySelector("#root")).render(
+  /*   <>
     {element1}
     <hr/>
     {element2}
   </> */
-  <>  
-    <BlueColorPicker/>
-    <RedColorPicker/>
+  <>
+    <BlueColorPicker />
+    <RedColorPicker />
   </>
 );

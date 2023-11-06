@@ -1,24 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const SideMenu = (props) => {
   console.log(props.showMenu);
-  return(
+  return (
     <>
       <div
-      style={{
-        border:'1px solid rgba(244,67,54,1.0)',
-        width:'200px',
-        height:'100vh',
-        textAlign:props.direction,
-        textTransform:'uppercase',
-        
-        
-      }}>
+        style={{
+          border: "1px solid rgba(244,67,54,1.0)",
+          width: "200px",
+          height: "100vh",
+          textAlign: props.direction,
+          textTransform: "uppercase",
+        }}
+      >
         {props.direction}
 
-        <ul style={{listStyle:'none', paddingLeft:'0px', lineHeight:'2.6rem'}}>
+        <ul
+          style={{
+            listStyle: "none",
+            paddingLeft: "0px",
+            lineHeight: "2.6rem",
+          }}
+        >
           <li>Lorem.</li>
           <li>Reiciendis.</li>
           <li>At.</li>
@@ -34,24 +38,19 @@ const SideMenu = (props) => {
           <li>Mollitia!</li>
           <li>Modi!</li>
           <li>Laudantium.</li>
-        </ul> 
-
+        </ul>
       </div>
     </>
   );
-}
+};
 
 const App = (props) => {
-  const {showMenu} = props;
-  return( 
-    <>
-      {showMenu && <SideMenu  direction='left'/>}
-    </>
-  );
-}
+  const { showMenu } = props;
+  return <>{showMenu && <SideMenu direction="left" />}</>;
+};
 
-ReactDOM.createRoot(document.querySelector('#root')).render(
+ReactDOM.createRoot(document.querySelector("#root")).render(
   <>
-    <App showMenu={true}/>
+    <App showMenu={true} />
   </>
 );
